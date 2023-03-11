@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap");
+
+@width-mobile: 320px;
+@width-desktop: 665px;
+
+@color-white: #ffffff;
+@color-white-milk: #f2f2f2;
+@color-white-light: #f4f5fc;
+@color-blue-neon: #5a61ed;
+@color-black: #000000;
+@color-black-light: #111111;
+@color-silver-light: #7c7c7c;
+@color-red: #ff2222;
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.page-body {
+	background-color: @color-white-light;
+}
+
+.main {
+	height: 100%;
+
+	@media (min-width: @width-desktop) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+// НАЗВАНИЕ ФОРМЫ РЕГИСТРАЦИИ
+.registration {
+	width: @width-mobile;
+	height: 100%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto 1fr auto;
+	background-color: @color-white;
+
+	@media (min-width: @width-desktop) {
+		width: @width-desktop;
+		height: 481px;
+		grid-template-columns: 1fr 528px;
+		grid-template-rows: max-content 1fr 65px;
+		grid-template-areas:
+			"title header"
+			"title form"
+			"title footer";
+	}
+
+	&__title {
+		width: @width-mobile;
+		height: 138px;
+		padding: 6.5px 22.5px;
+		display: flex;
+		align-items: end;
+		background-color: @color-blue-neon;
+
+		@media (min-width: @width-desktop) {
+			grid-area: title;
+			width: 100%;
+			height: 481px;
+			position: relative;
+		}
+
+		h1 {
+			font-family: "PT Sans", sans-serif;
+			font-weight: 400;
+			font-size: 49px;
+			line-height: 63px;
+			letter-spacing: 0.5px;
+			color: @color-white;
+
+			@media (min-width: @width-desktop) {
+				position: absolute;
+				width: 162px;
+				bottom: 72px;
+				right: -45px;
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}
+
+// ШАПКА ФОРМЫ РЕГИСТРАЦИИ
+.registration {
+	&__header {
+		margin: 39px 21px 17px;
+		font-family: "Work Sans", sans-serif;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
+		color: @color-black-light;
+
+		@media (min-width: @width-desktop) {
+			grid-area: header;
+		}
+	}
+
+	&__header-title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		letter-spacing: -0.46px;
+	}
+}
+
+// ФОРМА РЕГИСТРАЦИИ
+.registration {
+	&__form {
+		margin-left: 21px;
+		margin-right: 21px;
+
+		@media (min-width: @width-desktop) {
+			grid-area: form;
+			align-self: start;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__form-item {
+		padding-bottom: 13px;
+
+		@media (min-width: @width-desktop) {
+			width: 235px;
+		}
+	}
+
+	&__form-item:nth-child(odd) {
+		@media (min-width: @width-desktop) {
+			margin-right: 15px;
+		}
+	}
+
+	&__form-label {
+		font-family: "Work Sans", sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: @color-silver-light;
+
+		&--active {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 16px;
+			color: @color-black-light;
+		}
+	}
+
+	&__form-input {
+		width: 100%;
+		display: block;
+		padding-top: 5px;
+		padding-bottom: 6px;
+		font-family: "Work Sans", sans-serif;
+		font-size: 14px;
+		line-height: 16px;
+		color: @color-black;
+		border: none;
+		border-bottom: 0.7px solid @color-white-milk;
+
+		&--inline {
+			width: min-content;
+			margin: 0;
+			margin-top: 5px;
+			display: inline-block;
+		}
+	}
+
+	&__form-input::placeholder {
+		display: block;
+		font-family: "Work Sans", sans-serif;
+		font-size: 14px;
+		line-height: 16px;
+		color: @color-silver-light;
+	}
+
+	&__form-input:valid {
+		background-image: url(../img/Shape.svg);
+		background-size: 11px 8px;
+		background-position: right top 50%;
+		background-repeat: no-repeat;
+	}
+
+	&__form-input:invalid {
+		color: @color-red;
+		border-bottom: 2px solid @color-red;
+	}
+
+	&__form-select {
+		width: 100%;
+		display: block;
+		padding-top: 2px;
+		padding-bottom: 6px;
+		font-family: "Work Sans", sans-serif;
+		font-size: 14px;
+		line-height: 16px;
+		color: @color-black;
+		border: none;
+		border-bottom: 0.7px solid @color-white-milk;
+
+		&--inline {
+			width: max-content;
+			display: inline-block;
+			margin-right: 10px;
+			padding-right: 4px;
+		}
+
+		&--inline:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__form-link {
+		color: @color-blue-neon;
+	}
+
+	&__form-button {
+		width: 154px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: "PT Sans", sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 18px;
+		color: @color-white;
+		background-color: @color-blue-neon;
+		border: none;
+	}
+}
+
+// ПОДВАЛ ФОРМЫ РЕГИСТРАЦИИ
+.registration {
+	&__form-footer {
+		margin: 39px 21px;
+		align-self: end;
+		display: flex;
+
+		font-family: "Work Sans", sans-serif;
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 15px;
+		color: @color-black;
+
+		@media (min-width: @width-desktop) {
+			margin-top: 0;
+			margin-bottom: 33px;
+			grid-area: footer;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}

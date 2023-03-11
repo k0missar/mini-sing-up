@@ -1,12 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page-html">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<link rel="stylesheet" href="css/style.min.css" />
+		<title>Sign up</title>
 	</head>
-	<body>
-		Привет мир
+	<body class="page-body">
+		<main class="main">
+			<div class="registration">
+				<div class="registration__title">
+					<h1>Sign up</h1>
+				</div>
+				<div class="registration__header">
+					<p class="registration__header-title">New user?</p>
+					<p>Use the form below to create your account.</p>
+				</div>
+				<form
+					action="#"
+					method="post"
+					id="registration__form"
+					class="registration__form"
+				>
+					<div class="registration__form-item">
+						<label for="first-name" class="registration__form-label"
+							>First Name</label
+						>
+						<input
+							class="registration__form-input"
+							type="text"
+							id="first-name"
+							name="first-name"
+							placeholder="Alice"
+						/>
+					</div>
+					<div class="registration__form-item">
+						<label for="last-name" class="registration__form-label"
+							>Last Name</label
+						>
+						<input
+							class="registration__form-input"
+							type="text"
+							id="last-name"
+							name="last-name"
+							placeholder="Miller"
+						/>
+					</div>
+					<div class="registration__form-item">
+						<label for="nationality" class="registration__form-label"
+							>Nationality</label
+						>
+						<select
+							class="registration__form-select"
+							name="nationality"
+							id="nationality"
+						>
+							<option value="russian">Russian</option>
+							<option value="american" selected>American</option>
+							<option value="european">European</option>
+						</select>
+					</div>
+					<div class="registration__form-item">
+						<label for="email" class="registration__form-label">E-mail</label>
+						<input
+							class="registration__form-input"
+							type="email"
+							id="email"
+							name="email"
+							placeholder="alice.miller@yahoo.com"
+							pattern="(?=.*[a-zA-Z0-9])[a-zA-z0-9]{1,}@(?=.*[a-zA-Z0-9])[a-zA-z0-9]{1,}\.(?=.*[a-zA-Z0-9])[a-zA-z]{2,}"
+							required
+						/>
+					</div>
+					<div class="registration__form-item">
+						<label for="date" class="registration__form-label"
+							>Date of Birth</label
+						>
+						<div>
+							<select
+								id="date"
+								name="date"
+								class="registration__form-select registration__form-select--inline"
+							>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21" selected>21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+
+							<select
+								name="month"
+								id="month"
+								class="registration__form-select registration__form-select--inline"
+							>
+								<option value="january">January</option>
+								<option value="february">February</option>
+								<option value="march">March</option>
+								<option value="april">April</option>
+								<option value="may">May</option>
+								<option value="june">June</option>
+								<option value="july">July</option>
+								<option value="august">August</option>
+								<option value="september">September</option>
+								<option value="october">October</option>
+								<option value="november">November</option>
+								<option value="december" selected>December</option>
+							</select>
+
+							<select
+								id="year-list"
+								class="registration__form-select registration__form-select--inline"
+							>
+								<option value="1995">1995</option>
+								<option value="1996">1996</option>
+								<option value="1997">1997</option>
+								<option value="1998">1998</option>
+								<option value="1999">1999</option>
+								<option value="2000">2000</option>
+								<option value="2001">2001</option>
+								<option value="2002">2002</option>
+								<option value="2003">2003</option>
+								<option value="2004">2004</option>
+								<option value="2005">2005</option>
+							</select>
+						</div>
+					</div>
+					<div class="registration__form-item">
+						<label class="registration__form-label">Gender</label>
+						<div>
+							<input
+								class="registration__form-input registration__form-input--inline"
+								type="radio"
+								id="male"
+								value="Male"
+								name="gender"
+							/>
+							<label
+								for="male"
+								class="registration__form-label registration__form-label--active"
+								>Male</label
+							>
+							<input
+								class="registration__form-input registration__form-input--inline"
+								type="radio"
+								id="female"
+								value="Female"
+								name="gender"
+								checked
+							/>
+							<label
+								for="female"
+								class="registration__form-label registration__form-label--active"
+								>Female</label
+							>
+						</div>
+					</div>
+					<div class="registration__form-item">
+						<label for="password" class="registration__form-label"
+							>Password</label
+						>
+						<input
+							class="registration__form-input"
+							type="password"
+							name="password"
+							id="password"
+							pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}"
+							minlength="8"
+							required
+						/>
+					</div>
+					<div class="registration__form-item">
+						<label for="confirm-password" class="registration__form-label"
+							>Confirm Password</label
+						>
+						<input
+							class="registration__form-input"
+							type="password"
+							name="confirm-password"
+							id="confirm-password"
+							pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}"
+							required
+						/>
+					</div>
+				</form>
+				<div class="registration__form-footer">
+					<p>
+						Have an account?
+						<a href="#" class="registration__form-link">Login</a>
+					</p>
+					<button
+						type="submit"
+						form="registration__form"
+						class="registration__form-button"
+					>
+						Complete Signup
+					</button>
+				</div>
+			</div>
+		</main>
+
 	</body>
 </html>
