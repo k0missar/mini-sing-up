@@ -19,11 +19,13 @@
 				</div>
 				<form
 					action="#"
-					method="post"
+					method="get"
 					id="registration__form"
 					class="registration__form"
 				>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate1"
+					>
 						<label for="first-name" class="registration__form-label"
 							>First Name</label
 						>
@@ -35,7 +37,9 @@
 							placeholder="Alice"
 						/>
 					</div>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate2"
+					>
 						<label for="last-name" class="registration__form-label"
 							>Last Name</label
 						>
@@ -47,7 +51,9 @@
 							placeholder="Miller"
 						/>
 					</div>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate3"
+					>
 						<label for="nationality" class="registration__form-label"
 							>Nationality</label
 						>
@@ -61,7 +67,9 @@
 							<option value="european">European</option>
 						</select>
 					</div>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate4"
+					>
 						<label for="email" class="registration__form-label">E-mail</label>
 						<input
 							class="registration__form-input"
@@ -73,7 +81,9 @@
 							required
 						/>
 					</div>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate5"
+					>
 						<label for="date" class="registration__form-label"
 							>Date of Birth</label
 						>
@@ -153,7 +163,9 @@
 							</select>
 						</div>
 					</div>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate6"
+					>
 						<label class="registration__form-label">Gender</label>
 						<div>
 							<input
@@ -183,7 +195,9 @@
 							>
 						</div>
 					</div>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate7"
+					>
 						<label for="password" class="registration__form-label"
 							>Password</label
 						>
@@ -194,10 +208,13 @@
 							id="password"
 							pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}"
 							minlength="8"
+							onchange="pass(event)"
 							required
 						/>
 					</div>
-					<div class="registration__form-item">
+					<div
+						class="registration__form-item registration__form-item--animate8"
+					>
 						<label for="confirm-password" class="registration__form-label"
 							>Confirm Password</label
 						>
@@ -207,6 +224,8 @@
 							name="confirm-password"
 							id="confirm-password"
 							pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}"
+							minlength="8"
+							onchange="pass(event)"
 							required
 						/>
 					</div>
@@ -220,6 +239,7 @@
 						type="submit"
 						form="registration__form"
 						class="registration__form-button"
+						onclick="submitForm(event)"
 					>
 						Complete Signup
 					</button>
@@ -227,5 +247,6 @@
 			</div>
 		</main>
 
+		<script src="js/script.min.js"></script>
 	</body>
 </html>
